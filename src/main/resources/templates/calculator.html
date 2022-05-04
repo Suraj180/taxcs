@@ -33,7 +33,8 @@
     <ul>
         <div class="hamburgur-on"></div>
         <li><a href="home">Home</a></li>
-        <li><a href="calculator">Calculator</a></li>
+        <li><a class="active" href="calculator">Personal-Calculator</a></li>
+        <li><a href="CorporateCalculator">Corporate-Calculator</a></li>
         <!--        <li><a href="sec2">About</a></li>-->
     </ul>
 </nav>
@@ -44,7 +45,7 @@
             <form action="#" th:action="@{/save}" th:object="${taxForm}" method="post" >
                 <div class="row">
                     <div class="col-half">
-                        <h4>Marital Status</h4>
+                        <h4 style="padding-top: 40px; padding-bottom: 10px">Marital Status</h4>
                         <div class="input-group">
                             <input id="marital1" type="radio" name="status" th:field="*{status}" value="Married"/>
                             <label for="marital1">Married</label>
@@ -52,10 +53,19 @@
                             <label for="marital2">Unmarried</label>
                         </div>
                     </div>
+                    <div class="col-half">
+                        <h4 style="padding-top: 40px; padding-bottom: 10px">Personal Details</h4>
+                        <div class="input-group input-group-icon">
+                            <input type="text" placeholder="Personal Name" name="PName"  required/>
+                            <div class="input-icon"><i class="fa fa-building"></i></div>
+                        </div>
+                    </div>
+
+
                 </div>
 
 
-                <h4>Income</h4>
+                <h4 style="padding-top: 40px; padding-bottom: 10px">Income</h4>
                 <div class="row">
                     <div class="col-half">
                         <div class="input-group input-group-icon">
@@ -88,7 +98,7 @@
 
                 <div class="row">
                     <div class="col-half">
-                        <h4>Time-Span</h4>
+                        <h4 style="padding-top: 40px; padding-bottom: 10px">Time-Span</h4>
                         <div class="input-group" >
 
                             <select name="time" th:field="*{time}">
@@ -99,7 +109,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <h4>Deduction</h4>
+                    <h4 style="padding-top: 40px; padding-bottom: 10px">Deduction</h4>
                     <div class="col-half">
                         <div class="input-group input-group-icon">
                             <input type="text" placeholder="Provident Fund" name="fund" required/>
@@ -125,18 +135,15 @@
                 <div class="align">
                     <div class="row">
                         <div class="col-half">
-                            <div class="input-group">
+                            <div style="padding-top: 40px; padding-bottom: 10px" class="input-group">
                                 <input type="submit" name="taxamnt" value="Submit"/>
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </form>
-        </div>
-        <div class="column-2 box">
-
-
-
         </div>
     </div>
 </div>

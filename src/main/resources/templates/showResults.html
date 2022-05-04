@@ -19,10 +19,11 @@
     </ul>
 </nav>
 <div class="container">
-    <h1>Responsive Table</h1>
+    <heading class="h10">Personal Tax Results</heading>
     <table class="rwd-table" >
         <thead>
         <tr>
+            <th>Name</th>
             <th>Total Salary</th>
             <th>Marital Status</th>
             <th>Total Income</th>
@@ -31,14 +32,16 @@
         </thead>
         <tbody>
         <tr th:each="tax: ${taxes}">
+            <td th:text="${tax.PName}" />
             <td th:text="${tax.salary}" />
-            <td th:text="${tax.status}" />
+            <td th:text="${tax.status}"/>
             <td th:text="${tax.totalIncome}" />
             <td th:text="${tax.totalTax}" />
         </tr>
         </tbody>
     </table>
-    <h3>Resize Me</h3>
+    <a href="calculator"> <button type="submit"  style="padding: 30px 100px; margin-bottom: 20px; margin-top: 50px " class="btn btn-success"  > Calculate Again</button></a>
+
 </div>
 </body>
 </html>
