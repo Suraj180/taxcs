@@ -9,7 +9,7 @@
     border-collapse: collapse;
 }
 
-.rwd-table tr:first-child {
+.rwd-table tr:last-child {
     border-top: none;
     background: #428bca;
     color: #fff;
@@ -21,7 +21,7 @@
     background-color: #f5f9fc;
 }
 
-.rwd-table tr:nth-child(odd):not(:first-child) {
+.rwd-table tr:nth-child(odd):not(:last-child) {
     background-color: #ebf3f9;
 }
 
