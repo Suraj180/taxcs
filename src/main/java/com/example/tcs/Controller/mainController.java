@@ -1,9 +1,10 @@
 package com.example.tcs.Controller;
 
-import com.example.tcs.CTax;
+import com.example.tcs.*;
+import com.example.tcs.CRUD.entity.Posts;
+import com.example.tcs.CRUD.repository.postRepository;
 import com.example.tcs.Controller.CTaxRepository;
 import com.example.tcs.Controller.TaxRepository;
-import com.example.tcs.Taxs;
 import com.example.tcs.CTax;
 import com.example.tcs.Taxs;
 //import com.example.tms.service;
@@ -14,6 +15,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.io.UnsupportedEncodingException;
+import java.security.Principal;
+import java.util.List;
+import java.util.Optional;
 
 
 @Controller
@@ -21,6 +26,12 @@ public class mainController {
 
     @Autowired
     private TaxRepository taxRepository;
+
+    @Autowired
+    private AdminRepository repo;
+
+    @Autowired
+    private postRepository postRepo;
 
     @Autowired
     private CTaxRepository CTaxRepository;
@@ -32,11 +43,27 @@ public class mainController {
         return "home";
     }
 
-    @GetMapping("/ptaximg")
-    public String pic(Model model)
+    @GetMapping("/News")
+    public String pic(Principal p, Model m)
     {
-        model.addAttribute("title","TCS - Picture");
-        return "ptaximg";
+//        String em= p.getName();
+//
+//        UserDtls u= repo.findByUsername(em);
+//        m.addAttribute("username",u.getUsername());
+
+        List<Posts> list = postRepo.findAll();
+        m.addAttribute("all_posts",list);
+        return "News";
+    }
+
+    @GetMapping("/NewsPage/{id}")
+    public String editForm(@PathVariable(value = "id")Long id,Model m) throws UnsupportedEncodingException {
+        Optional<Posts> posts = postRepo.findById(id);
+        Posts pos = posts.get();
+        m.addAttribute("posts",pos);
+
+
+        return"NewsPage";
     }
 
     @GetMapping("/calculator")
