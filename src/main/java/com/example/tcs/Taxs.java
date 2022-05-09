@@ -159,7 +159,7 @@ public class Taxs {
                 return totalTax;
 
             }else if (totalIncome > 2000000) {
-                totalTax = ((0.36 * (totalIncome - 2000000)) + (0.01 * 400000) + (0.2 * 100000)+ (0.2 * 200000)+ (0.3 * 1300000));
+                totalTax = ((0.36 * (totalIncome - 2000000)) + (0.01 * 400000) + (0.1 * 100000)+ (0.2 * 200000)+ (0.3 * 1300000));
                 return totalTax;
             }
         } else if (Objects.equals(status, "Married")){
@@ -180,7 +180,7 @@ public class Taxs {
                 return totalTax;
 
             }else if (totalIncome > 2000000) {
-                totalTax = ((0.36 * (totalIncome - 2000000)) + (0.01 * 400000) + (0.2 * 100000)+ (0.2 * 200000)+ (0.3 * 1300000));
+                totalTax = ((0.36 * (totalIncome - 2000000)) + (0.01 * 400000) + (0.1 * 100000)+ (0.2 * 200000)+ (0.3 * 1300000));
                 return totalTax;
             }
 
