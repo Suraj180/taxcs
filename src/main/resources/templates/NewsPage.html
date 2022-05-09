@@ -6,56 +6,29 @@
 <!--    <link rel="stylesheet" th:href="@{/css/style.css}">-->
 <!--    <link rel="stylesheet" th:href="@{/css/dashboard.css}">-->
     <link rel="stylesheet" th:href="@{/css/article.css}">
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}">
 
     <title>Dashboard</title>
 </head>
 <body>
-<!--<div id="user_header">-->
-<!--    <div id="user" class="animated fadeInDown">-->
+<div id="user_header">
+    <div id="user" class="animated fadeInDown">
 
-<!--        <div id="user_picture">-->
-<!--            <div id="picture_box">-->
-<!--                <img src="http://localhost:8080/image/logo1.png" height="150px" width="180px">-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div id="user_info">-->
-<!--            <h2 class="user_name">News Portal</h2>-->
-<!--            <hr>-->
-<!--            <ul id="user_list">-->
-<!--                <li><i class="icon-building info_icon"></i></span> Tax Calculator</li>-->
+        <div id="user_picture">
+            <div id="picture_box">
+                <img src="http://localhost:8080/image/logo1.png" height="150px" width="180px">
+            </div>
+        </div>
+        <div id="user_info">
+            <h2 class="user_name">Article</h2>
+            <hr>
+            <ul id="user_list">
+                <li><i class="icon-building info_icon"></i></span> Tax Calculator</li>
 
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div id="scorebox"class="animated flipInX">-->
-<!--        <div id="score">-->
-<!--            <span class="score animated flipInX">[[${username}]]</span>-->
-<!--        </div>-->
-<!--        <div id="points">-->
-<!--            <img src="https://icon-library.com/images/system-administrator-icon/system-administrator-icon-1.jpg" width="100px" >-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!--<nav>-->
-
-
-<!--    <ul>-->
-
-<!--        <div class="hamburgur-on"></div>-->
-
-<!--        <li><a href="home">Home</a></li>-->
-<!--        <li><a href="http://localhost:8080/home" class="active">News</a></li>-->
-<!--        &lt;!&ndash;        <li><a href="sec2">About</a></li>&ndash;&gt;-->
-<!--    </ul>-->
-<!--</nav>-->
-
-
-
-<div class="hero-image">
-    <div class="hero-text">
-        <h1>[[${posts.about}]]</h1>
-
+            </ul>
+        </div>
     </div>
+
 </div>
 <nav>
 
@@ -72,10 +45,10 @@
 </nav>
 <article>
 
-    <h2>[[${posts.title}]]</h2>
+    <h2 class="h25">[[${posts.title}]]</h2>
 
     <p> <span class="first">L</span>[[${posts.text}]]</p>
-
+    <h5 class="h26">By [[${posts.About}]]</h5>
 
 </article>
 

@@ -147,6 +147,12 @@ body {
     background: linear-gradient(173deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 14%, rgba(0,186,223,1) 31%);
 }
 
+.yellow{
+    background-color: #f79216;
+    height: 48px;
+
+}
+
 header {
     margin-top: 0;
 
@@ -240,8 +246,7 @@ nav ul li a {
     color: #fff;
     padding: 0 10px;
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-weight: normal;
     line-height: 50px; /**  Rarely used! **/
 }
 

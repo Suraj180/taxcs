@@ -19,7 +19,7 @@
             </div>
         </div>
         <div id="user_info">
-            <h2 class="user_name">Admin DashBoard</h2>
+            <h2 class="user_name">Add Posts</h2>
             <hr>
             <ul id="user_list">
                 <li><i class="icon-building info_icon"></i></span> Tax Calculator</li>
@@ -27,14 +27,7 @@
             </ul>
         </div>
     </div>
-    <div id="scorebox"class="animated flipInX">
-        <div id="score">
-            <span class="score animated flipInX">[[${username}]]</span>
-        </div>
-        <div id="points">
-            <img src="https://icon-library.com/images/system-administrator-icon/system-administrator-icon-1.jpg" width="100px" >
-        </div>
-    </div>
+
 </div>
 <nav>
 
@@ -55,7 +48,7 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h4 class="text-center text-Primary">Add Posts</h4>
+                    <h4 class="text-center text-Primary" style="padding-bottom: 60px; color: #ff8400; font-size: 40px;">Add Posts</h4>
 
                     <div th:if="${session.msg}">
                         <h5 style="color:green; alignment: left"  th:text="${session.msg}" ></h5> </div>
@@ -63,23 +56,23 @@
 
                     <form th:action="@{./save_post}" method="post" enctype="multipart/form-data">
 
-                        <div class="mb-3"><label for="title" class="form-label">Title</label>
+                        <div class="mb-3"><label for="title" class="form-label" style=" color: #da0909">Title</label>
                             <input type="text" class="form-control" id="title" name="title" required placeholder="Enter Title"></div>
 
 
 
-                        <div class="mb-3"><label for="img" class="form-label">Image</label>
-                            <input type="file" class="form-control" id="img" name="image" accept="image/png, image/jpeg, image/jpg" ></div>
+<!--                        <div class="mb-3"><label for="img" class="form-label" >Image</label>-->
+<!--                            <input type="file" class="form-control" id="img" name="image" accept="image/png, image/jpeg, image/jpg" ></div>-->
 
-                        <div class="mb-3"><label for="about" class="form-label">About</label>
+                        <div class="mb-3"><label for="about" class="form-label" style="padding-top: 20px; color: #da0909">About</label>
                             <input type="text" class="form-control" id="about" name="About" required placeholder="Enter About"></div>
 
-                        <div class="mb-3"><label for="text" class="form-label">Text</label>
-                            <textarea class="form-control" id="text" required name="text" rows="10" cols="30" > Enter Text </textarea></div>
+                        <div class="mb-3"><label for="text" class="form-label" style="padding-top: 20px; color: #da0909">Text</label>
+                            <textarea class="form-control" id="text" required name="text" rows="10" cols="60" > Enter Text </textarea></div>
 
 
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-success">Submit</button>
 
                     </form>
                 </div>

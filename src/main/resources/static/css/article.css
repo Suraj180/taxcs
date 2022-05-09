@@ -117,13 +117,30 @@ p {
     color: red;
 
 }
-h2{
+.h25{
     font-family: 'League Gothic', sans-serif;
-    font-size: 2rem;
+    font-size: 4rem;
+    color: #d77f00;
+    text-shadow: black;
+    stroke: black;
     margin-top: 25px;
     margin-bottom: 25px;
     border-bottom: 3px solid red;
-    width:40%;
+    width:100%;
+    background-color: white;
+    padding: 5px;
+    border-top: 3px solid black;
+}
+.h26{
+    font-family: 'League Gothic', sans-serif;
+    font-size: 1.5rem;
+    color: #d77f00;
+    text-shadow: black;
+    stroke: black;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid red;
+    width:20%;
     background-color: white;
     padding: 5px;
     border-top: 3px solid black;
@@ -239,8 +256,7 @@ nav ul li a {
     color: #fff;
     padding: 0 10px;
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-weight: normal;
     line-height: 50px; /**  Rarely used! **/
 }
 

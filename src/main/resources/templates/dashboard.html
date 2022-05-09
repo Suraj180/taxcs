@@ -41,14 +41,15 @@
     <ul>
 
         <div class="hamburgur-on"></div>
-        <li><a href="">[[${username}]]</a></li>
-        <li><a th:href="@{/logout}">Logout</a></li>
+
+        <li class="yellow"><a th:href="@{/logout}">Logout</a></li>
         <!--        <li><a href="sec2">About</a></li>-->
     </ul>
 </nav>
 
 
 <div class="container p-5">
+
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <div class="card">
@@ -56,15 +57,15 @@
                     <h5 style="color:green; alignment: left"  th:text="${session.msg}" ></h5> </div>
                 <th:block th:text="${#session.removeAttribute('msg')}"> </th:block>
                 <div class="card-header">
-                    <a href="loadForm" class="btn btn-primary" >Add Products</a>
+                    <a href="loadForm" class="btn btn-warning" >Add Posts</a>
                 </div>
                 <div class="card-body">
 
                     <table class="table" style=" table-layout: fixed;">
                         <thead>
                         <tr>
-                            <th scope="col"style="width:10%">Id</th>
-                            <th scope="col"style="width:30%">Title</th>
+                            <th scope="col" style="width:10%">Id</th>
+                            <th scope="col" style="width:30%">Title</th>
                             <th scope="col" style="width:40%">Description</th>
 
                         </tr>
@@ -94,61 +95,9 @@
 
 </div>
 
-<div class="card" style="width: 35rem; " th:each="p : ${all_posts}">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body" >
-        <h5 class="card-title">[[${p.title}]]</h5>
-        <p class="card-text">[[${p.About}]]</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-</div>
 
-<div class="container p-5">
-    <div class="row">
-        <div class="row row-cols-1 row-cols-md-2 g-4" >
-            <div class="col" th:each="p : ${all_posts}">
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">[[${p.title}]]</h5>
-                        <p class="card-text">[[${p.about}]]</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
 
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!--    <div class="col">-->
-<!--        <div class="card">-->
-<!--            <img src="..." class="card-img-top" alt="...">-->
-<!--            <div class="card-body">-->
-<!--                <h5 class="card-title">Card title</h5>-->
-<!--                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="col">-->
-<!--        <div class="card">-->
-<!--            <img src="..." class="card-img-top" alt="...">-->
-<!--            <div class="card-body">-->
-<!--                <h5 class="card-title">Card title</h5>-->
-<!--                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="col">-->
-<!--        <div class="card">-->
-<!--            <img src="..." class="card-img-top" alt="...">-->
-<!--            <div class="card-body">-->
-<!--                <h5 class="card-title">Card title</h5>-->
-<!--                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-</div>
 
 
 </body>

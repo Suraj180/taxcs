@@ -84,11 +84,11 @@ h3:after {
 }*/
 
 hr {
-    border: 1px solid #0B86C3;
+    border: 1px solid #000000;
 }
 
 .info_icon {
-    color: #0B86C3;
+    color: #000000;
     font-size: 18px;
     padding: 3px;
 }
@@ -129,20 +129,21 @@ hr {
 #user_info {
     width: 550px;
     height: 150px;
-    background-color: rgb(33, 41, 56);
+    background-color: rgb(22, 124, 183);
     padding-top: 10px;
 }
 
 .user_name {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
+    font-size: 35px;
     margin: 0;
-    color: #fff;
+    color: #f9a411;
     letter-spacing: 1.75px;
 }
 
 .verified {
-    color: #0B86C3;
+    color: #000000;
 }
 
 #user_info ul {

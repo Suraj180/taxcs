@@ -18,20 +18,12 @@
             </div>
         </div>
         <div id="user_info">
-            <h2 class="user_name">Admin DashBoard</h2>
+            <h2 class="user_name">Edit Post</h2>
             <hr>
             <ul id="user_list">
                 <li><i class="icon-building info_icon"></i></span> Tax Calculator</li>
 
             </ul>
-        </div>
-    </div>
-    <div id="scorebox"class="animated flipInX">
-        <div id="score">
-            <span class="score animated flipInX">[[${username}]]</span>
-        </div>
-        <div id="points">
-            <img src="https://icon-library.com/images/system-administrator-icon/system-administrator-icon-1.jpg" width="100px" >
         </div>
     </div>
 </div>
@@ -54,7 +46,7 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h4 class="text-center text-Primary">Add Posts</h4>
+                    <h4 class="text-center text-Primary" style="padding-bottom: 40px; color: #ff8400; font-size: 40px">Edit Posts</h4>
 
                     <div th:if="${session.msg}">
                         <h5 style="color:green; alignment: left"  th:text="${session.msg}" ></h5> </div>
@@ -63,20 +55,20 @@
                     <form th:action="@{../update_post}" method="post">
                         <input type="hidden" th:value="${posts.id}" name="id">
 
-                        <div class="mb-3"><label for="title" class="form-label">Title</label>
+                        <div class="mb-3"><label for="title" class="form-label" style="padding-top: 20px; color: #da0909">Title</label>
                             <input type="text" class="form-control" id="title" name="title" th:value="${posts.title}" required placeholder="Enter Title"></div>
 
 <!--                        [[${posts.title}]]-->
 
-                        <div class="mb-3"><label for="about" class="form-label">About</label>
+                        <div class="mb-3"><label for="about" class="form-label" style="padding-top: 20px; color: #da0909">About</label>
                             <input type="text" class="form-control" id="about" name="About" th:value="${posts.about}" required placeholder="Enter About"></div>
 
-                        <div class="mb-3"><label for="text" class="form-label">Text</label>
-                            <textarea class="form-control" id="text" required name="text"  style="height: 100px; " >[[${posts.text}]] </textarea> </div>
+                        <div class="mb-3"><label for="text" class="form-label" style="padding-top: 20px; color: #da0909">Text</label>
+                            <textarea class="form-control" id="text" required name="text"  rows="10" cols="40" >[[${posts.text}]] </textarea> </div>
 
 
 
-                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="submit" class="btn btn-success">Update</button>
 
                     </form>
                 </div>

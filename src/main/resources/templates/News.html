@@ -26,14 +26,7 @@
             </ul>
         </div>
     </div>
-    <div id="scorebox"class="animated flipInX">
-        <div id="score">
-            <span class="score animated flipInX">[[${username}]]</span>
-        </div>
-        <div id="points">
-            <img src="https://icon-library.com/images/system-administrator-icon/system-administrator-icon-1.jpg" width="100px" >
-        </div>
-    </div>
+
 </div>
 <nav>
 
@@ -66,9 +59,9 @@
                         <img src="http://localhost:8080/image/logo1.png" alt="sample87" />
                         <div class="date">By [[${p.about}]]</div>
                         <figcaption>
-                            <h2>[[${p.title}]]</h2>
+                            <h2 style="color: #ff851b">[[${p.title}]]</h2>
                             <p class="truncate">[[${p.text}]]</p>
-                            <a th:href="@{'/NewsPage/'+${p.id}}" class="read-more">Read More</a>
+                            <a th:href="@{'/NewsPage/'+${p.id}}" class="read-more" style="color: #00b9ff; ">Read More</a>
                         </figcaption>
                     </figure>
 
